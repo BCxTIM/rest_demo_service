@@ -1,7 +1,6 @@
 # rest_demo_service
 Clone this repository
 
-Initialize MySQL database with Docker Composer
+Run
 ` docker-compose up -d`
-  
-  Run application as SpringBoot
+
