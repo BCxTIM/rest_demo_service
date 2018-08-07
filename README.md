@@ -2,6 +2,6 @@
 Clone this repository
 
 Run
-` docker create netowrk rest_network `
+` docker create netowrk rest_network ` <br />
 ` docker-compose up -d`
 
