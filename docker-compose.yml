@@ -21,9 +21,15 @@ services:
     working_dir: /app
     volumes:
     - ./:/app
+    - ~/.m2:/root/.m2
+    tty: true
     ports:
     - "8080:8080"
     command: mvn clean spring-boot:run
     links:
       - db
 
+networks:
+  default:
+    external:
+      name: rest_network
