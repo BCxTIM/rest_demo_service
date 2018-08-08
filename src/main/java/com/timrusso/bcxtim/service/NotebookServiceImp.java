@@ -1,7 +1,9 @@
 package com.timrusso.bcxtim.service;
 
 import com.timrusso.bcxtim.dao.BookDao;
+import com.timrusso.bcxtim.dao.NotebookDao;
 import com.timrusso.bcxtim.model.Book;
+import com.timrusso.bcxtim.model.Notebook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -12,34 +14,34 @@ import java.util.List;
  * Created by tmoiseev on 3/2/2018.
  */
 @Service
-public class BookServiceImp implements BookService {
+public class NotebookServiceImp implements NotebookService {
 
     @Autowired
-    private BookDao bookDao;
+    private NotebookDao bookDao;
 
     @Transactional
     @Override
-    public void save(Book book) {
-        bookDao.save(book);
+    public void save(Notebook notebook) {
+        bookDao.save(notebook);
     }
 
     @Override
-    public Book get(int id) {
+    public Notebook get(int id) {
         return bookDao.get(id);
     }
 
     @Override
-    public List<Book> list() {
+    public List<Notebook> list() {
         return bookDao.list();
     }
 
     @Override
-    public void update(Book book) {
-        bookDao.update(book);
+    public void update(Notebook notebook) {
+        bookDao.update(notebook);
     }
 
     @Override
-    public void delete(Book book) {
-        bookDao.delete(book);
+    public void delete(Notebook notebook) {
+        bookDao.delete(notebook);
     }
 }

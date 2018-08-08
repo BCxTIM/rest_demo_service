@@ -11,6 +11,6 @@ public interface BookService {
     void save(Book book);
     Book get(int id);
     List<Book> list();
-    void update(int id, Book book);
-    void delete(int id);
+    void update(Book book);
+    void delete(Book book);
 }
